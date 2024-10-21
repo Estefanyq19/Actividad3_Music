@@ -1,8 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import styles from "../styles/Formulario.module.css"; // Usa estilos CSS Module
-
+import styles from "../styles/Formulario.module.css";
 const Formulario = () => {
   const {
     register,
@@ -12,14 +11,13 @@ const Formulario = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    // Muestra la alerta cuando el formulario es enviado correctamente
     Swal.fire({
       title: "Datos guardados",
       text: "El formulario se ha enviado con éxito",
       icon: "success",
       confirmButtonText: "Aceptar",
     });
-    reset(); // Resetea el formulario después del envío
+    reset();
   };
 
   return (
@@ -37,7 +35,7 @@ const Formulario = () => {
         </div>
 
         <div className={styles.field}>
-          <label>Email</label>
+          <label>Correo</label>
           <input
             type="email"
             {...register("email", { required: true })}

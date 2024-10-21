@@ -1,14 +1,17 @@
+body{
+  background-image: url('https://res.cloudinary.com/dfo4pp3fq/image/upload/v1729476627/Phonk_music_vpycwx.jpg');
+}
 .container {
     max-width: 900px;
     margin: 2rem auto;
     padding: 1.5rem;
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff5e;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(12, 239, 0, 0.532);
   }
   
   .title {
-    color: #fff;
+    color: #000000;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -16,11 +19,11 @@
   
   .table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse:collapse;
   }
   
   th, td {
-    color: #fff;
+    color: #85efef;
     padding: 1rem;
     text-align: left;
   }
@@ -36,11 +39,11 @@
   }
   
   tr:nth-child(even) {
-    background-color: #3b3b3b;
+    background-color: #333;
   }
   
   tr:hover {
-    background-color: #444;
+    background-color: #55da5592;
   }
   
   td {

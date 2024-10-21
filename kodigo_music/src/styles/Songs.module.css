@@ -1,0 +1,62 @@
+.songsContainer {
+  padding: 2rem;
+  background-image: url('https://res.cloudinary.com/dfo4pp3fq/image/upload/v1729477507/656814935e3cc0f87acd0c3d480f3f0e_v0se43.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+}
+
+.songItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(6, 201, 35, 0.579);
+  margin: 0.5rem 0;
+  border-radius: 30px;
+}
+
+.nowPlaying {
+  position:fixed;
+  bottom: 0;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display:flex;
+  align-items:center;
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.albumArt {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.playButton {
+  background-color: #000000;
+  border: none;
+  color: rgb(255, 0, 221);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.playButton:hover {
+  background-color: rgba(207, 212, 68, 0.459);
+}
+
+.progressBar {
+  width: 100%;
+  background-color: #ffffff;
+  height: 5px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 20%;
+  background-color: #09ff00;
+  height: 100%;
+}

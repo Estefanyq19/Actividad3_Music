@@ -1,24 +1,32 @@
-import React from "react";
-import styles from "../styles/Canciones.module.css"; // Para los estilos
+import React, { useState } from "react";
+import styles from "../styles/Canciones.module.css";
+import Song from '../components/Songs';
 
-const Canciones = () => {
+const Album = () => {
   const songs = [
-    { title: "November Rain", artist: "Guns N' Roses", album: "Greatest Hits", time: "8:57" },
-    { title: "La Muralla Verde", artist: "Los Enanitos Verdes", album: "Contrareloj", time: "2:41" },
-    { title: "Lamento Boliviano", artist: "Los Enanitos Verdes", album: "Big Bang", time: "3:42" },
+    { title: "Mi vida eres tú", artist: "Los temerarios", genero: "Regional mexicana", time: "40:26"},
+    { title: "Mañana será bonito", artist: "Karol G", genero: "Pop urbano latino", time: "52:44"},
+    { title: "Forajido EP2", artist: "Christian Nodal", genero: "Regional mexicana", time: "21:00"},
   ];
+
+  const [currentSong, setCurrentSong] = useState(null); 
+  const handlePlay = (song) => {
+    setCurrentSong(song); 
+  };
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Tus Canciones</h2>
+      <h2 className={styles.title}>Tu Biblioteca</h2>
+
       <table className={styles.table}>
         <thead>
           <tr>
             <th>#</th>
             <th>Título</th>
             <th>Artista</th>
-            <th>Álbum</th>
+            <th>Género</th>
             <th>Duración</th>
+            <th>Reproducir</th>
           </tr>
         </thead>
         <tbody>
@@ -27,14 +35,30 @@ const Canciones = () => {
               <td>{index + 1}</td>
               <td>{song.title}</td>
               <td>{song.artist}</td>
-              <td>{song.album}</td>
+              <td>{song.genero}</td>
               <td>{song.time}</td>
+              <td>
+                <button onClick={() => handlePlay(song)} className={styles.playButton}>
+                  ▶️
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      {/* Mostramos el componente Song cuando hay una canción seleccionada */}
+      {currentSong && (
+        <div className={styles.songContainer}>
+          <Song 
+            title={currentSong.title}
+            artist={currentSong.artist}
+            genero={currentSong.genero}
+          />
+        </div>
+      )}
     </div>
   );
 };
 
-export default Canciones;
+export default Album;

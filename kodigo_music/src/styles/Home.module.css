@@ -3,21 +3,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Cambiamos height a min-height */
-  width: 100vw; /* Aseguramos que ocupe el ancho completo */
-  background: linear-gradient(135deg, #1db954, #191414);
-  color: white;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('https://res.cloudinary.com/dfo4pp3fq/image/upload/v1729479115/Spotify_music_lockscreen___wallpaper___Kiat_foto_Gambar_kota_Foto_kolase_dinding_zscsdy.jpg');
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
-  
+  /*debo revisar*/
   .title {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
   }
   
   .subtitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
   
@@ -27,18 +27,19 @@
   }
   
   .button {
-    background-color: #fff;
-    color: #1db954;
+    background-color: #00ff519a;
+    color: #000000;
     padding: 0.8rem 2rem;
     font-size: 1rem;
     border-radius: 50px;
+    border-style: double;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
   }
   
   .button:hover {
-    background-color: #1ed760;
+    background-color: #00000070;
   }
   
   @media (max-width: 768px) {
